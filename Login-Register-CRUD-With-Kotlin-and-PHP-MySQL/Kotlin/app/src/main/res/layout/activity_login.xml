@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/desc1"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:text="@string/desc1" />
 
         <EditText
             android:layout_width="match_parent"
@@ -136,49 +136,6 @@
                 android:layout_centerVertical="true"/>
 
         </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:id="@+id/sign_in_button"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:background="@drawable/roud_back5">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/google"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/title1"
-                android:adjustViewBounds="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:layout_marginEnd="30dp"
-                android:text="@string/logg"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
-        </RelativeLayout>
-
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/btnFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:minHeight="48dp"
-            android:paddingLeft="35dp"
-            android:paddingTop="12dp"
-            android:paddingRight="1dp"
-            android:paddingBottom="12dp"
-            android:textSize="17sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -63,17 +63,17 @@
             android:background="@drawable/roud_back5">
 
             <EditText
+                android:id="@+id/PasswordInp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="40dp"
+                android:autofillHints="password"
                 android:background="@android:color/transparent"
                 android:hint="@string/hintpassword"
-                android:textSize="20sp"
-                android:autofillHints="password"
-                android:padding="15dp"
-                android:layout_marginEnd="40dp"
+                android:inputType="textPassword"
                 android:maxLines="1"
-                android:id="@+id/PasswordInp"
-                android:inputType="textPassword"/>
+                android:padding="15dp"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/showhidepassbtn"
@@ -163,35 +163,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_toEndOf="@+id/txtOr"
                 android:layout_centerVertical="true" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/btnGgll"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roud_back5"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/title2"
-                android:src="@drawable/google"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="30dp"
-                android:gravity="center"
-                android:text="@string/regg"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
         </RelativeLayout>
 

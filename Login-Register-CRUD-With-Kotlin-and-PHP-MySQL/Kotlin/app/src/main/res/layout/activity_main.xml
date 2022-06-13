@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:contentDescription="@string/welcom"
-        android:src="@drawable/bacjhome" />
+        android:src="@drawable/car" />
 
     <TextView
         android:id="@+id/txttitl"
@@ -25,7 +25,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:text="@string/welcom"
-        android:textColor="@color/secondy"
+        android:textColor="@color/bluesky"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text=""
-        android:textColor="#3F557A"
+        android:textColor="@color/bluesky"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:contentDescription="@string/allusers"
-                android:src="@drawable/allusers" />
+                android:src="@drawable/add" />
 
             <TextView
                 android:layout_width="wrap_content"

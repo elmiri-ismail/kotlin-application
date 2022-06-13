@@ -41,8 +41,7 @@ class LoginActivity : AppCompatActivity(){
         val passwordinput:EditText=findViewById(R.id.PasswordInput)
         val showHide:ImageView=findViewById(R.id.showhidepasswordbtn)
         val forgotPass:TextView=findViewById(R.id.forgotbtn)
-        val googllbtn: RelativeLayout =findViewById(R.id.sign_in_button)
-        val facebookbtn: LoginButton =findViewById(R.id.btnFacebook)
+
         val signupbtn:TextView=findViewById(R.id.txtSignup)
 
         var v=false
@@ -99,50 +98,10 @@ class LoginActivity : AppCompatActivity(){
         }
 
         //SignIn With Gmail :
-        googllbtn.setOnClickListener{
-            if(checkInternet()){
-                val gso:GoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().requestProfile().build()
-                val mGoogleSignInClient:GoogleSignInClient = GoogleSignIn.getClient(this@LoginActivity, gso)
-                val signInIntent = mGoogleSignInClient.signInIntent
-                startActivityForResult(signInIntent, 1000)
-            }else
-                alert("Erreur :","No Network Connected !")
-        }
+
 
         //SignIn With Facebook :
-        facebookbtn.setOnClickListener{
-            if(checkInternet()){
-                facebookbtn.setReadPermissions("email")
-                callbackManager = CallbackManager.Factory.create()
-                LoginManager.getInstance().registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
-                    override fun onSuccess(result: LoginResult?) {
-                        val graphRequest =
-                            GraphRequest.newMeRequest(result?.accessToken) { obj, response ->
-                                try {
-                                    if (obj.has("id")) {
-                                        /*Log.d("FACEBOOKDATA",obj.getString("name"))
-                                          Log.d("FACEBOOKDATA",obj.getString("email"))*/
-                                        //Log.d("FACEBOOKDATA",JSONObject(obj.getString("picture")).getJSONObject("data").getString("url"))
-                                        val intent =
-                                            Intent(this@LoginActivity, MainActivity::class.java)
-                                        intent.putExtra("UserName", "" + obj.getString("name"))
-                                        startActivity(intent)
-                                    }
-                                } catch (e: Exception) {
-                                    alert("Error !!!", "" + e.message)
-                                }
-                            }
-                        val param = Bundle()
-                        param.putString("fields", "name,email,id,picture.type(large)")
-                        graphRequest.parameters = param
-                        graphRequest.executeAsync()
-                    }
-                    override fun onCancel() {}
-                    override fun onError(error: FacebookException?) {}
-                })
-            }else
-                alert("Erreur :","No Network Connected !")
-        }
+
     }
 
     private fun alert(title:String,message:String){
