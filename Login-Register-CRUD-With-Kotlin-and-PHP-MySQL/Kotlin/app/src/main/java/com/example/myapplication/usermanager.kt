@@ -78,7 +78,7 @@ class usermanager : AppCompatActivity() {
             val confirm=ConfirmasswordInp.text.toString().trim()
             if(password == confirm){
 
-                val url:String="http://172.16.1.107/API%20PHP/Operations/Authontification/Register.php"
+                val url:String="http://172.16.1.107/API%20PHP/Operations/CRUD/Create.php"
 
                 val params=HashMap<String,String>()
                 params["username"]=username
