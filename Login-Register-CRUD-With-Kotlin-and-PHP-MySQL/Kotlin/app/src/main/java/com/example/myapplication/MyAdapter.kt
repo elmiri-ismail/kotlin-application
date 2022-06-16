@@ -21,6 +21,8 @@ class MyAdapter (var ctx:Context, var ressource:Int, var items:ArrayList<User>) 
 
         val txtemail:TextView=view.findViewById(R.id.textEmail)
         val txtusername:TextView=view.findViewById(R.id.textUserName)
+        val txtvehicule:TextView=view.findViewById(R.id.vehicule)
+
         val deletebtn:ImageButton=view.findViewById(R.id.deletbtn)
         val updatebtn:LinearLayout=view.findViewById(R.id.inte)
 
@@ -28,6 +30,7 @@ class MyAdapter (var ctx:Context, var ressource:Int, var items:ArrayList<User>) 
 
         txtemail.text=user.email
         txtusername.text=user.username
+        txtvehicule.text=user.password
 
         deletebtn.setOnClickListener{
             val builder= AlertDialog.Builder(context)

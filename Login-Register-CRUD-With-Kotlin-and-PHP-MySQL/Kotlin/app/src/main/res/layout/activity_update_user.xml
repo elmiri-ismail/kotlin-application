@@ -11,20 +11,20 @@
     <ImageView
         android:id="@+id/back"
         android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="70dp"
         android:layout_gravity="start"
         android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/back" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/personna"
-        android:layout_gravity="center"
         android:id="@+id/pictureofuser"
-        app:civ_border_width="3dp"
-        app:civ_border_color="@color/primary" />
+        android:layout_width="221dp"
+        android:layout_height="192dp"
+        android:layout_gravity="center"
+        android:src="@drawable/personna"
+        app:civ_border_color="@color/primary"
+        app:civ_border_width="3dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
-            android:text="@string/email"
+            android:text="Description"
             android:gravity="center"
             android:textColor="@color/primary"/>
 
@@ -102,6 +102,7 @@
             android:textColor="@color/white"
             android:id="@+id/btnsave"
             android:textSize="23sp" />
+
 
     </LinearLayout>
 

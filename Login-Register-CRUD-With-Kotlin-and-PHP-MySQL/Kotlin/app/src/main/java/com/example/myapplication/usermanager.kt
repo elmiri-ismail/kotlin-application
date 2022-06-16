@@ -23,10 +23,7 @@ class usermanager : AppCompatActivity() {
         val btnuser:Button=findViewById(R.id.btnuser)
         val UsernamelIn:EditText=findViewById(R.id.UsernamelIn)
         val EmailIn:EditText=findViewById(R.id.EmailIn)
-        val PasswordIn:EditText=findViewById(R.id.PasswordIn)
-        val ConfirmasswordInp:EditText=findViewById(R.id.ConfirmasswordInp)
-        val showp:ImageView=findViewById(R.id.showhidepassbt)
-        val showc:ImageView=findViewById(R.id.showhidepassCbt)
+        val Etat:EditText=findViewById(R.id.etats)
         val back:ImageView=findViewById(R.id.back)
         var methd:String=intent.getStringExtra("Methode").toString()
         back.setOnClickListener{ finish() }
@@ -45,45 +42,18 @@ class usermanager : AppCompatActivity() {
         var v1=false
         var v2=false
 
-        //Toogle txt Type of confirm :
-        showc.setOnClickListener(){
-            if(v1 != true){
-                v1=true
-                showc.setBackgroundResource(R.drawable.hide)
-                ConfirmasswordInp.transformationMethod= HideReturnsTransformationMethod.getInstance()
-            } else {
-                v1=false
-                showc.setBackgroundResource(R.drawable.view)
-                ConfirmasswordInp.transformationMethod= PasswordTransformationMethod.getInstance()
-            }
-        }
-
-        //toogle txt password type :
-        showp.setOnClickListener(){
-            if(v2 != true){
-                v2=true
-                showp.setBackgroundResource(R.drawable.hide)
-                PasswordIn.transformationMethod= HideReturnsTransformationMethod.getInstance()
-            } else {
-                v2=false
-                showp.setBackgroundResource(R.drawable.view)
-                PasswordIn.transformationMethod= PasswordTransformationMethod.getInstance()
-            }
-        }
-
         btnuser.setOnClickListener{
             val username=UsernamelIn.text.toString()
             val email=EmailIn.text.toString().trim()
-            val password=PasswordIn.text.toString().trim()
-            val confirm=ConfirmasswordInp.text.toString().trim()
-            if(password == confirm){
+            val etat=Etat.text.toString().trim()
+            if(Etat.text.toString().trim()!=""){
 
                 val url:String="http://172.16.1.107/API%20PHP/Operations/CRUD/Create.php"
 
                 val params=HashMap<String,String>()
                 params["username"]=username
                 params["email"]=email
-                params["password"]=confirm
+                params["etat"]=etat
                 val jO= JSONObject(params as Map<*, *>)
 
                 val rq: RequestQueue = Volley.newRequestQueue(this)

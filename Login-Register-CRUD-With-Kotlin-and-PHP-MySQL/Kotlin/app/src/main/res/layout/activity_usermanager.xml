@@ -40,7 +40,6 @@
             android:autofillHints="emailAddress"
             android:background="@drawable/roud_back5"
             android:hint="@string/hintusername"
-            android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="15dp"
             android:textSize="20sp" />
@@ -51,15 +50,15 @@
             android:layout_height="55dp"
             android:layout_below="@id/UsernamelIn"
             android:layout_marginTop="20dp"
-            android:autofillHints="emailAddress"
+            android:autofillHints="Vehicule"
             android:background="@drawable/roud_back5"
-            android:hint="@string/hintemail"
-            android:inputType="textEmailAddress"
+            android:hint="Vehicule description"
             android:maxLines="1"
             android:padding="15dp"
             android:textSize="20sp" />
 
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
@@ -68,68 +67,26 @@
             android:background="@drawable/roud_back5">
 
             <EditText
-                android:id="@+id/PasswordIn"
+                android:id="@+id/etats"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="40dp"
-                android:autofillHints="password"
+                android:autofillHints="Etat"
                 android:background="@android:color/transparent"
-                android:hint="@string/hintpassword"
-                android:inputType="textPassword"
+                android:hint="Etat"
                 android:maxLines="1"
                 android:padding="15dp"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/showhidepassbt"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/chaine2"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/view" />
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_below="@id/pss"
-            android:id="@+id/cpss"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roud_back5">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:hint="@string/hintconfirm"
-                android:textSize="20sp"
-                android:padding="15dp"
-                android:autofillHints="password"
-                android:layout_marginEnd="40dp"
-                android:maxLines="1"
-                android:id="@+id/ConfirmasswordInp"
-                android:inputType="textPassword" />
-
-            <ImageView
-                android:id="@+id/showhidepassCbt"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/chaine3"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/view" />
-
-        </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnuser"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_below="@id/cpss"
+            android:layout_below="@id/pss"
             android:layout_marginTop="40dp"
             android:background="@drawable/btn_round"
             android:text="@string/titleContent"

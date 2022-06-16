@@ -47,7 +47,8 @@ class Listofusers : AppCompatActivity() {
                     val dt=res.getJSONArray("Users")
                     //alert("Hello",""+dt.getJSONObject(0).getString("UserName"))
                     for(i in 0 until dt.length()){
-                        lst.add(User(dt.getJSONObject(i).getInt("ID"),dt.getJSONObject(i).getString("UserName"),dt.getJSONObject(i).getString("Email")))
+                        lst.add(User(dt.getJSONObject(i).getInt("ID"),dt.getJSONObject(i).getString("UserName"),dt.getJSONObject(i).getString("Email"),dt.getJSONObject(i).getString("Password")) //alert("title","Position : "+position+" ID : "+id+" userId : "+lst.get(position).id)
+                        )
                         //alert("hello",lst.get(i).username)
                         lstview.adapter = MyAdapter(this,R.layout.listingusers, lst as ArrayList<User>)
                         /*lstview.setOnItemClickListener { parent:AdapterView<*>, view: View, position:Int, id:Long ->
