@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="80dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="42dp"
         android:layout_gravity="start"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
@@ -19,8 +19,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/pictureofuser"
-        android:layout_width="221dp"
-        android:layout_height="192dp"
+        android:layout_width="138dp"
+        android:layout_height="170dp"
         android:layout_gravity="center"
         android:src="@drawable/personna"
         app:civ_border_color="@color/primary"
@@ -45,15 +45,15 @@
             android:textColor="@color/primary" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editeUsername"
-            android:textSize="20sp"
-            android:inputType="text"
+            android:layout_width="331dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
             android:autofillHints="name"
-            android:padding="10dp"
             android:background="@drawable/borderinput"
-            android:layout_gravity="center" />
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,15 +68,17 @@
             android:textColor="@color/primary"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editeEmail"
+            android:layout_width="331dp"
+
+            android:layout_height="57dp"
+
+            android:layout_gravity="center"
             android:autofillHints="emailAddress"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:inputType="textEmailAddress"
             android:background="@drawable/borderinput"
-            android:layout_gravity="start" />
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -91,17 +93,17 @@
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="@string/save"
-            android:paddingStart="40dp"
-            android:paddingEnd="40dp"
+            android:id="@+id/btnsave"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
             android:background="@drawable/btn_round"
             android:drawableEnd="@drawable/check"
-            android:textStyle="bold"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="@string/save"
             android:textColor="@color/white"
-            android:id="@+id/btnsave"
-            android:textSize="23sp" />
+            android:textSize="23sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

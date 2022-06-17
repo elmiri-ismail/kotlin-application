@@ -7,15 +7,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:paddingRight="25dp"
         android:paddingLeft="25dp"
-        android:layout_height="match_parent">
+        android:paddingRight="25dp">
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="44dp"
+            android:layout_height="33dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/back" />
 
@@ -59,11 +59,11 @@
 
         <RelativeLayout
 
+            android:id="@+id/pss"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
             android:layout_below="@id/EmailIn"
-            android:id="@+id/pss"
+            android:layout_marginTop="20dp"
             android:background="@drawable/roud_back5">
 
             <EditText
@@ -84,16 +84,16 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnuser"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/pss"
             android:layout_marginTop="40dp"
             android:background="@drawable/btn_round"
-            android:text="@string/titleContent"
-            android:paddingEnd="50dp"
-            android:paddingStart="20dp"
-            android:textAllCaps="false"
             android:drawableStart="@drawable/addicon"
+            android:paddingStart="20dp"
+            android:paddingEnd="50dp"
+            android:text="@string/titleContent"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />

@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val mGoogleSignInClient: GoogleSignInClient = GoogleSignIn.getClient(this@MainActivity, gso);
 
         val nom=intent.getStringExtra("UserName")
-// kaidkhol  n elese makaib9ach f if wakha zidt intent.putExtra("UserName",nom) f activity dial usermanager
         if(nom != null) usertxt.text=nom; else startActivity(Intent(this@MainActivity, LoginActivity::class.java))
 
         btnlogout.setOnClickListener(){

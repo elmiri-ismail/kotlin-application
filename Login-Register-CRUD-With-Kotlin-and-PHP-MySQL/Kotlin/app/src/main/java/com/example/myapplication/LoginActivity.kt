@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity(){
         val forgotPass:TextView=findViewById(R.id.forgotbtn)
 
         val signupbtn:TextView=findViewById(R.id.txtSignup)
+        val button = findViewById<Button>(R.id.button2)
 
         var v=false
 
@@ -96,7 +97,10 @@ class LoginActivity : AppCompatActivity(){
             }else
                 alert("Erreur :","No Network Connected !")
         }
-
+        button.setOnClickListener {
+            val intent=Intent(this@LoginActivity,client::class.java)
+            startActivity(intent)
+        }
         //SignIn With Gmail :
 
 
@@ -138,5 +142,6 @@ class LoginActivity : AppCompatActivity(){
         else
             return true
     }
+
 
 }
