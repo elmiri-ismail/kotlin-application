@@ -21,7 +21,7 @@ class updateUser : AppCompatActivity() {
     lateinit var imageuser:ImageView
     lateinit var username:EditText
     lateinit var email:EditText
-
+    lateinit var state:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_user)
@@ -30,6 +30,7 @@ class updateUser : AppCompatActivity() {
         imageuser=findViewById(R.id.pictureofuser)
         username=findViewById(R.id.editeUsername)
         email=findViewById(R.id.editeEmail)
+        state=findViewById(R.id.editstate)
 
         val back:ImageView=findViewById(R.id.back)
         back.setOnClickListener{ finish() }
@@ -72,6 +73,7 @@ class updateUser : AppCompatActivity() {
         params["id"]= ""+id
         params["username"]=username
         params["email"]=email
+        params["password"]= state.toString()
         val jO= JSONObject(params as Map<*, *>)
         val rq: RequestQueue = Volley.newRequestQueue(this)
         val jor= JsonObjectRequest(Request.Method.PATCH,url,jO, Response.Listener { res->

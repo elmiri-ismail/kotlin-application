@@ -17,30 +17,27 @@
         $db->Message(0,404,"Page Not Found !");
     elseif( !isset($data->id) 
         || !isset($data->username) 
-            || !isset($data->email)
+            || !isset($data->email) ||!isset($data->password)
             || empty(trim($data->id))
             || empty(trim($data->username))
-            || empty(trim($data->email))
+            || empty(trim($data->email)) ||empty(trim($data->password))
         ):
         $db->Message(0,422,"Please Fill all The Required Fields !");
     else:
         $id=$data->id;
         $username=$data->username;
         $email=trim($data->email);
+        $password = $data->password
 
         if(!is_numeric($data->id)):
             $db->Message(0,422,"ID Must be Integer !");
         elseif(!$db->SelectedByID($id)):
             $db->Message(0,422,"No Data With This User Id !!");
-       // elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)):
-            //$db->Message(0,422,"Invalid Email Format !");
         elseif(strlen($username) < 3):
             $db->Message(0,422,"Your User Name Must Be At Least 3 Characters !");
         else:
             try{
-                if($db->SelectedByEmail($email)):
-                    $db->Message(0,422,"This Email Already Exist !");
-                elseif($db->UpdateUser($id,$username,$email)):
+               if($db->UpdateUser($id,$username,$email,$password)):
                     $db->Message(1,201,"User Updated Successfully .");
                 endif;
             }catch(PDOEception $e){
