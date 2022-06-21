@@ -17,7 +17,7 @@
         $db->Message(0,404,"Page Not Found !");
 
     elseif( !isset($data->select) || empty(trim($data->select)) ):
-        $db->Message(0,422,"The SelectBy is Required !");
+        $db->Message(0,422,"The Select By is Required !");
 
     else:
         try{

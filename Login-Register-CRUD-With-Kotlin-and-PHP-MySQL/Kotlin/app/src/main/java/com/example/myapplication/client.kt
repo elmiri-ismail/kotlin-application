@@ -50,7 +50,7 @@ class client : AppCompatActivity() {
                         lst.add(User(dt.getJSONObject(i).getInt("ID"),dt.getJSONObject(i).getString("UserName"),dt.getJSONObject(i).getString("Email"),dt.getJSONObject(i).getString("Password")) //alert("title","Position : "+position+" ID : "+id+" userId : "+lst.get(position).id)
                         )
                         //alert("hello",lst.get(i).username)
-                        lstview.adapter = MyAdapter(this,R.layout.listingusers, lst as ArrayList<User>)
+                        lstview.adapter = MyAdapter2(this,R.layout.activity_listingsclient, lst as ArrayList<User>)
                         /*lstview.setOnItemClickListener { parent:AdapterView<*>, view: View, position:Int, id:Long ->
                             //alert("title","Position : "+position+" ID : "+id+" userId : "+lst.get(position).id)
                             var intent=Intent(this,updateUser::class.java)

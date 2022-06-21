@@ -17,27 +17,27 @@
         $db->Message(0,404,"Page Not Found !");
     elseif( !isset($data->username) 
             || !isset($data->email) 
-            || !isset($data->password)
+            || !isset($data->etat)
             || empty(trim($data->username))
             || empty(trim($data->email))
-            || empty(trim($data->password))
+            || empty(trim($data->etat))
         ):
         $db->Message(0,422,"oop all The Required Fields !");
     else:
         $username=$data->username;
         $email=trim($data->email);
-        $password=trim($data->password);
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)):
+        $etat=trim($data->etat);
+        if(!$email):
             $db->Message(0,422,"Invalid Email Format !");
-        elseif(strlen($password) < 8):
-            $db->Message(0,422,"Your Password Must Be At Least 8 Characters !");
-        elseif(strlen($username) < 3):
+        elseif(!$etat):
+            $db->Message(0,422,"you should add Etat of user");
+        elseif(!$username):
             $db->Message(0,422,"Your User Name Must Be At Least 3 Characters !");
         else:
             try{
                 if($db->SelectedByEmail($email)):
                     $db->Message(0,422,"This Email Already Exist !");
-                elseif($db->RegisterClient($username,$email,$password)):
+                elseif($db->RegisterClient($username,$email,$etat)):
                     $db->Message(1,201,"User Added Successfully .");
                 endif;
             }catch(PDOEception $e){

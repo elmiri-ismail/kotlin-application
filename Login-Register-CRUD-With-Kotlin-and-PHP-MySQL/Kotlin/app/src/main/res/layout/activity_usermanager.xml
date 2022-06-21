@@ -33,16 +33,17 @@
 
         <EditText
             android:id="@+id/UsernamelIn"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
             android:layout_below="@id/titletext"
             android:layout_marginTop="20dp"
             android:autofillHints="emailAddress"
-            android:background="@drawable/roud_back5"
-            android:hint="@string/hintusername"
+            android:layout_gravity="center"
+            android:background="@drawable/borderinput"
+
             android:maxLines="1"
             android:padding="15dp"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/EmailIn"

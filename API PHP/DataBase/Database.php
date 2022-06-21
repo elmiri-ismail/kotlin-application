@@ -54,9 +54,9 @@
             echo ''.$stmt->error;
             return false;
         }
-        public function RegisterClient($username,$email,$password)
+        public function RegisterClient($username,$email,$etat)
         {   
-            $sql='INSERT INTO client (UserName,Email,Password) VALUES("'.$username.'","'.$email.'","'.password_hash($password,PASSWORD_DEFAULT).'");';
+            $sql='INSERT INTO client (UserName,Email,Password) VALUES("'.$username.'","'.$email.'","'.$etat.'");';
             $stmt=$this->con->prepare($sql);
             if($stmt->execute()):
                 return true;
@@ -85,8 +85,8 @@
             return false;
         }
 
-        public function UpdateUser($id,$username,$email,$password){
-            $sql='UPDATE client SET UserName="'.$username.'",Email="'.$email.'",Password="'.$password.'" WHERE ID='.$id;
+        public function UpdateUser($id,$username,$email){
+            $sql='UPDATE client SET UserName="'.$username.'",Email="'.$email.'" WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             if($stmt->execute()):
                 return true;
@@ -118,7 +118,7 @@
         }
 
         public function SelecteAll(){
-            $sql='SELECT ID,UserName,Email FROM client';
+            $sql='SELECT * FROM client';
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
