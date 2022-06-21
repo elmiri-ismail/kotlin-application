@@ -22,7 +22,7 @@
         android:layout_width="138dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
-        android:src="@drawable/personna"
+        android:src="@drawable/logo"
         app:civ_border_color="@color/primary"
         app:civ_border_width="3dp" />
 
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textSize="22sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginBottom="10dp"
@@ -46,8 +46,8 @@
 
         <EditText
             android:id="@+id/editeUsername"
-            android:layout_width="331dp"
-            android:layout_height="57dp"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:autofillHints="name"
             android:background="@drawable/borderinput"
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textSize="23sp"
+            android:textSize="15sp"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
@@ -69,9 +69,9 @@
 
         <EditText
             android:id="@+id/editeEmail"
-            android:layout_width="331dp"
+            android:layout_width="340dp"
 
-            android:layout_height="57dp"
+            android:layout_height="40dp"
 
             android:layout_gravity="center"
             android:autofillHints="emailAddress"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:textSize="23sp"
+            android:textSize="15sp"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
@@ -93,9 +93,9 @@
 
         <EditText
             android:id="@+id/editstate"
-            android:layout_width="331dp"
+            android:layout_width="340dp"
 
-            android:layout_height="57dp"
+            android:layout_height="40dp"
 
             android:layout_gravity="center"
             android:autofillHints="emailAddress"
@@ -121,12 +121,12 @@
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:background="@drawable/btn_round"
-            android:drawableEnd="@drawable/check"
+
             android:paddingStart="40dp"
             android:paddingEnd="40dp"
             android:text="@string/save"
             android:textColor="@color/white"
-            android:textSize="23sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
 

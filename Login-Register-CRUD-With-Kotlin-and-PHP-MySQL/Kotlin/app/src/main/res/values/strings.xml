@@ -2,8 +2,8 @@
     <string name="app_name">Authentification</string>
     <string name="title1">Sign Up</string>
     <string name="title2">Sign In</string>
-    <string name="desc1">Pleas Login To Your Account</string>
-    <string name="desc2">Pleas Create Your Account</string>
+    <string name="desc1">Please Login To Your Account</string>
+    <string name="desc2">Please Create Your Account</string>
     <string name="hintusername">Enter Your User Name</string>
     <string name="hintemail">Enter Your Email</string>
     <string name="hintpassword">Enter Your Password</string>
@@ -21,12 +21,13 @@
     <string name="welcom">Welcome In Home</string>
     <string name="logout">Log Out</string>
     <string name="addnew">Add User</string>
-    <string name="allusers">All Users</string>
+    <string name="allusers">All User</string>
     <string name="facebook_app_id">667269648023193</string>
     <string name="fb_login_protocol_scheme">fb667269648023193</string>
     <string name="titleContent">Title As Methode</string>
-    <string name="titleAll">List Of Users</string>
+    <string name="titleAll">List Of Clients</string>
     <string name="email">Email :</string>
-    <string name="username">User Name :</string>
+    <string name="username">UserName :</string>
     <string name="save">Save Changes</string>
+    <string name="client">Client Space</string>
 </resources>

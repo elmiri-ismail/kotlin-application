@@ -24,13 +24,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="46dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
             android:layout_toEndOf="@id/pack"
             android:gravity="center"
             android:text="@string/titleAll"
-            android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </RelativeLayout>

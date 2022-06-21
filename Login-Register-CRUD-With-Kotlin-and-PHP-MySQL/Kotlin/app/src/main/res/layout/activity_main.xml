@@ -9,13 +9,23 @@
     tools:context=".MainActivity">
 
     <ImageView
+
+        android:layout_width="142dp"
+        android:layout_height="168dp"
+
+
+        android:layout_marginRight="300dp"
+
+        android:src="@drawable/logo" />
+
+    <ImageView
         android:id="@+id/pic"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="140dp"
         android:contentDescription="@string/welcom"
-        android:src="@drawable/abb" />
+        android:src="@drawable/carwash" />
 
     <TextView
         android:id="@+id/txttitl"
@@ -23,10 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/pic"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:text="@string/welcom"
         android:textColor="@color/bluesky"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
@@ -54,7 +64,7 @@
 
         <RelativeLayout
             android:id="@+id/btnallUsers"
-            android:layout_width="80dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:background="@drawable/bordersolid"
             android:padding="10dp">
@@ -64,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:contentDescription="@string/allusers"
-                android:src="@drawable/user" />
+                android:src="@drawable/group" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -74,14 +84,14 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/allusers"
                 android:textColor="@color/subtext"
-                android:textSize="13sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/btnNewUser"
-            android:layout_width="80dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:background="@drawable/bordersolid"
@@ -102,18 +112,18 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/addnew"
                 android:textColor="@color/subtext"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/btnLogout"
-            android:layout_width="80dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:background="@drawable/bordersolid"
-            android:padding="4dp">
+            android:padding="9dp">
 
             <ImageView
                 android:id="@+id/img3"
@@ -131,7 +141,7 @@
                 android:gravity="center"
                 android:text="@string/logout"
                 android:textColor="@color/subtext"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
