@@ -69,14 +69,14 @@
 
        <ImageButton
            android:id="@+id/deletbtn"
-           android:layout_width="21dp"
-           android:layout_height="30dp"
+           android:layout_width="40dp"
+               android:layout_height="40dp"
            android:layout_marginStart="5dp"
            android:layout_marginTop="25dp"
            android:background="@android:color/transparent"
            android:contentDescription="@string/addnew"
            android:foregroundGravity="center"
-           android:src="@drawable/deleteicon" />
+           android:src="@drawable/deleter" />
 
    </LinearLayout>
 

@@ -27,6 +27,7 @@
         $id=$data->id;
         $username=$data->username;
         $email=trim($data->email);
+        $password=trim($data->password);
 
         if(!is_numeric($data->id)):
             $db->Message(0,422,"ID Must be Integer !");
@@ -38,9 +39,8 @@
             $db->Message(0,422,"Your User Name Must Be At Least 3 Characters !");
         else:
             try{
-                if($db->SelectedByEmail($email)):
-                    $db->Message(0,422,"This Email Already Exist !");
-                elseif($db->UpdateUser($id,$username,$email)):
+
+                if($db->UpdateUser($id,$username,$email,$password)):
                     $db->Message(1,201,"User Updated Successfully .");
                 endif;
             }catch(PDOEception $e){

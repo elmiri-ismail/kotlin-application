@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity(){
         val showHide:ImageView=findViewById(R.id.showhidepasswordbtn)
         val forgotPass:TextView=findViewById(R.id.forgotbtn)
 
-        val signupbtn:TextView=findViewById(R.id.txtSignup)
+
         val button = findViewById<Button>(R.id.button2)
 
         var v=false
@@ -61,10 +61,7 @@ class LoginActivity : AppCompatActivity(){
         }
 
         //Register Button :
-        signupbtn.setOnClickListener{
-            val intent=Intent(this@LoginActivity,RegisterActivity::class.java)
-            startActivity(intent)
-        }
+
 
         //Login Button :
         btnLogin.setOnClickListener{

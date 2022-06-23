@@ -27,8 +27,8 @@
             android:layout_marginBottom="25dp"
             android:gravity="center"
             android:text="@string/titleContent"
-            android:textColor="@color/secondy"
-            android:textSize="25sp"
+            android:textColor="@color/bluesky"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
@@ -36,27 +36,28 @@
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_below="@id/titletext"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:autofillHints="emailAddress"
-            android:layout_gravity="center"
             android:background="@drawable/borderinput"
+            android:hint="Client Name"
 
             android:maxLines="1"
             android:padding="15dp"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/EmailIn"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
             android:layout_below="@id/UsernamelIn"
             android:layout_marginTop="20dp"
             android:autofillHints="Vehicule"
-            android:background="@drawable/roud_back5"
+            android:background="@drawable/borderinput"
             android:hint="Vehicule description"
             android:maxLines="1"
             android:padding="15dp"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <RelativeLayout
 
@@ -64,20 +65,19 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_below="@id/EmailIn"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roud_back5">
+            android:layout_marginTop="20dp">
 
             <EditText
                 android:id="@+id/etats"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="340dp"
+                android:layout_height="50dp"
                 android:layout_marginEnd="40dp"
                 android:autofillHints="Etat"
-                android:background="@android:color/transparent"
-                android:hint="Etat"
+                android:background="@drawable/borderinput"
+                android:hint="State"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
         </RelativeLayout>
@@ -86,13 +86,13 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnuser"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/pss"
+            android:layout_marginLeft="27dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/btn_round"
             android:paddingStart="40dp"
             android:paddingEnd="40dp"
-            android:layout_marginLeft="27dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15sp"

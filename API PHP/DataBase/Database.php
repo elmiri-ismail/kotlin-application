@@ -85,8 +85,8 @@
             return false;
         }
 
-        public function UpdateUser($id,$username,$email){
-            $sql='UPDATE client SET UserName="'.$username.'",Email="'.$email.'" WHERE ID='.$id;
+        public function UpdateUser($id,$username,$email,$password){
+            $sql='UPDATE client SET UserName="'.$username.'",Email="'.$email.'",Password="'.$password.'" WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             if($stmt->execute()):
                 return true;
@@ -106,7 +106,7 @@
         }
 
         public function SelectedByID($id){
-            $sql='SELECT UserName,Email FROM client WHERE ID='.$id.' LIMIT 1';
+            $sql='SELECT UserName,Email,Password FROM client WHERE ID='.$id.' LIMIT 1';
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):

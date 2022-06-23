@@ -29,7 +29,7 @@
             android:layout_toEndOf="@id/pack"
             android:gravity="center"
             android:text="@string/titleAll"
-            android:textColor="@color/primary"
+            android:textColor="@color/bluesky"
             android:textSize="20sp"
             android:textStyle="bold" />
 

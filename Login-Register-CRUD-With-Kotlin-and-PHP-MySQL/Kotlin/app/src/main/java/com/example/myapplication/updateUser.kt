@@ -30,7 +30,7 @@ class updateUser : AppCompatActivity() {
         imageuser=findViewById(R.id.pictureofuser)
         username=findViewById(R.id.editeUsername)
         email=findViewById(R.id.editeEmail)
-        state=findViewById(R.id.editstate)
+        state=findViewById(R.id.editeState)
 
         val back:ImageView=findViewById(R.id.back)
         back.setOnClickListener{ finish() }
@@ -39,7 +39,7 @@ class updateUser : AppCompatActivity() {
         if(id.equals(null))startActivity(Intent(this, Listofusers::class.java)) else Afficher(id)
 
         btn.setOnClickListener{
-            if(checkInternet()) Save(id,username.text.toString(),email.text.toString())
+            if(checkInternet()) Save(id,username.text.toString(),email.text.toString(),state.text.toString())
             else alert("Erreur :","No Network Connected !")
         }
 
@@ -57,6 +57,7 @@ class updateUser : AppCompatActivity() {
                     var data=res.getJSONObject("User")
                     username.setText(data.getString("UserName").toString())
                     email.setText(data.getString("Email").toString())
+                    state.setText(data.getString("Password").toString())
                 } else { alert("Message d'Erreur !",res.getString("message")) }
             }catch (e:Exception){
                 alert("Message d'Erreur !",""+e.message)
@@ -67,13 +68,13 @@ class updateUser : AppCompatActivity() {
         rq.add(jor)
     }
 
-    private fun Save(id:Int,username:String,email:String){
+    private fun Save(id:Int,username:String,email:String,state:String){
         val url="http://172.16.1.107/API%20PHP/Operations/CRUD/Update.php"
         val params=HashMap<String,String>()
         params["id"]= ""+id
         params["username"]=username
         params["email"]=email
-        params["password"]= state.toString()
+        params["password"]= state
         val jO= JSONObject(params as Map<*, *>)
         val rq: RequestQueue = Volley.newRequestQueue(this)
         val jor= JsonObjectRequest(Request.Method.PATCH,url,jO, Response.Listener { res->
